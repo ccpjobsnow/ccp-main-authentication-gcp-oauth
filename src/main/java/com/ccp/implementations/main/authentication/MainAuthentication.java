@@ -1,10 +1,10 @@
 package com.ccp.implementations.main.authentication;
 
-import com.ccp.dependency.injection.CcpModuleExporter;
+import com.ccp.dependency.injection.CcpInstanceProvider;
 
-public class MainAuthentication implements CcpModuleExporter {
+public class MainAuthentication implements CcpInstanceProvider {
 
-	public Object export() {
+	public Object getInstance() {
 		return new GcpOauthAuthenticationProvider();
 	}
 
