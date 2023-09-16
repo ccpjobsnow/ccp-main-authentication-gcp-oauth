@@ -12,7 +12,7 @@ public class GcpOauthAuthenticationProvider implements CcpAuthenticationProvider
 	@Override
 	public String getJwtToken() {
 		try {
-			InputStream file = new CcpStringDecorator("credentials.json").inputStreamFrom().classLoader();
+			InputStream file = new CcpStringDecorator("credentials.json").inputStreamFrom().fromEnvironmentVariablesOrClassLoaderOrFile();
 			GoogleCredential credential = GoogleCredential.fromStream(file)
 					.createScoped(Collections.singleton("https://www.googleapis.com/auth/cloud-platform"));
 			credential.refreshToken();
