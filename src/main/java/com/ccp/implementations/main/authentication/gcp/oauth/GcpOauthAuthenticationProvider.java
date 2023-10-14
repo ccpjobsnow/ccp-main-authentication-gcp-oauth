@@ -22,10 +22,4 @@ public class GcpOauthAuthenticationProvider implements CcpAuthenticationProvider
 			throw new RuntimeException(e);
 		}
 	}
-	public static void main(String[] args) {
-		GcpOauthAuthenticationProvider gcpOauthAuthenticationProvider = new GcpOauthAuthenticationProvider();
-		String jwtToken = gcpOauthAuthenticationProvider.getJwtToken();
-		System.out.println(jwtToken);
-	}
-
 }
