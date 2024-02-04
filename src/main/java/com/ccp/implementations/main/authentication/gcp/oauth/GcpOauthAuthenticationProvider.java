@@ -9,7 +9,7 @@ import com.ccp.especifications.main.authentication.CcpAuthenticationProvider;
 
 public class GcpOauthAuthenticationProvider implements CcpAuthenticationProvider{
 
-	@Override
+	
 	public String getJwtToken() {
 		try {
 			CcpStringDecorator ccpStringDecorator = new CcpStringDecorator("GOOGLE_APPLICATION_CREDENTIALS");
